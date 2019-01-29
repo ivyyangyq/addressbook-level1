@@ -67,7 +67,7 @@ public class AddressBook {
      */
     private static final String MESSAGE_ADDED = "New person added: %1$s, Phone: %2$s, Email: %3$s";
     private static final String MESSAGE_ADDRESSBOOK_CLEARED = "Address book has been cleared!";
-    private static final String MESSAGE_ADDRESSBOOK_COUNTED = "Address book has %1$s entries";
+    private static final String MESSAGE_ADDRESSBOOK_COUNTED = "Address book has %1$s entries.";
     private static final String MESSAGE_COMMAND_HELP = "%1$s: %2$s";
     private static final String MESSAGE_COMMAND_HELP_PARAMETERS = "\tParameters: %1$s";
     private static final String MESSAGE_COMMAND_HELP_EXAMPLE = "\tExample: %1$s";
@@ -127,7 +127,7 @@ public class AddressBook {
     private static final String COMMAND_CLEAR_EXAMPLE = COMMAND_CLEAR_WORD;
 
     private static final String COMMAND_COUNT_WORD = "count";
-    private static final String COMMAND_COUNT_DESC = "Count the number of people in addressbook";
+    private static final String COMMAND_COUNT_DESC = "Count the number of people in address book";
     private static final String COMMAND_COUNT_EXAMPLE = COMMAND_COUNT_WORD;
 
     private static final String COMMAND_HELP_WORD = "help";
@@ -386,10 +386,10 @@ public class AddressBook {
                 return executeClearAddressBook();
             case COMMAND_HELP_WORD:
                 return getUsageInfoForAllCommands();
+            case COMMAND_COUNT_WORD:
+                return executeCountAddressBook();
             case COMMAND_EXIT_WORD:
                 executeExitProgramRequest();
-            case COMMAND_COUNT_WORD:
-                executeCountAddressBook();
             default:
                 return getMessageForInvalidCommandInput(commandType, getUsageInfoForAllCommands());
         }
