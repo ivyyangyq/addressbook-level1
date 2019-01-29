@@ -68,7 +68,7 @@
 || 
 || clear: Clears address book permanently.
 || 	Example: clear
-||
+|| 
 || count: Count the number of people in address book
 || 	Example: count
 || 
